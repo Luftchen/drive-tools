@@ -1,0 +1,31 @@
+{
+  "name": "drive-tools",
+  "version": "0.0.21",
+  "description": "Node.js package for listing drives and getting system path (Desktop, Downloads, and etc)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luftchen/drive-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Luftchen/drive-tools/issues"
+  },
+  "homepage": "https://github.com/Luftchen/drive-tools#readme",
+  "keywords": [
+    "drive",
+    "system",
+    "path",
+    "desktop",
+    "downloads",
+    "windows",
+    "macos"
+  ],
+  "author": "Hiroki Tanaka",
+  "license": "ISC",
+  "dependencies": {
+    "encoding-japanese": "^1.0.30"
+  }
+}
