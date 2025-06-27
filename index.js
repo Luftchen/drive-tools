@@ -132,7 +132,7 @@ exports.driveList = (function(drive_type = undefined, drive_type_not = undefined
 			} else {
 				// Modern PowerShell method
 				try {
-					var psCmd = `powershell -NoProfile -Command "Get-CimInstance Win32_LogicalDisk`;
+					var psCmd = `powershell -NoProfile -Command "[System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8; Get-CimInstance Win32_LogicalDisk`;
 					if(drive_type !== undefined){
 						psCmd += ` | Where-Object {$_.DriveType -eq ${parseInt(drive_type)}}`;
 					}
