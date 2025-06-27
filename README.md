@@ -110,4 +110,5 @@ X : https://x.com/hrktnk
 2021-06-03(0.0.20): bug fix
 2025-06-24(0.0.21): migrated repository to GitHub, added proper package.json metadata
 2025-06-24(0.0.22): added PowerShell support for Windows with wmic fallback, added use_wmic flag
+2021-06-27(0.0.23): bug fix
 ```

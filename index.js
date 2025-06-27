@@ -21,6 +21,12 @@ const existsWmic = () => {
   return fs.existsSync(wmicPath);
 };
 
+// Check if PowerShell exists
+const existsPowershell = () => {
+  const psPath = path.join(process.env.SystemRoot, "System32", "WindowsPowerShell", "v1.0", "powershell.exe");
+  return fs.existsSync(psPath);
+};
+
 exports.systemPath = (function(type){
 	switch(platform){
 		case "darwin":
@@ -87,7 +93,7 @@ exports.driveList = (function(drive_type = undefined, drive_type_not = undefined
 			var ret = [];
 			
 			// Use wmic if explicitly requested or if PowerShell fails
-			if (use_wmic || !existsWmic()) {
+			if (use_wmic || (!existsPowershell() && existsWmic())) {
 				// Legacy wmic method
 				var cond = "";
 				if(drive_type !== undefined){
